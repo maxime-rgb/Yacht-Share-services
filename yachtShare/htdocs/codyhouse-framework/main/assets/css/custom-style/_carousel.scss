@@ -1,0 +1,72 @@
+.carousel-container {
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    height: 450px;
+    max-width: 800px;
+    min-width: 600px;
+    margin: 0 auto;
+  
+    .carousel-card {
+      height: 25rem;
+      width: 20rem;
+      padding: 20px;
+      transition: 1s;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      background-color: #485b72;
+      color: #FFF;
+      cursor: pointer;
+      box-shadow: 1px 2px 3px grey;
+    }
+  
+    .carousel-icon {
+      width: 100%;
+    }
+  
+    #far-left {
+      left: 15%;
+      transform: scale(.9) translateY(0%) translateX(-50%);
+      z-index: 5;
+      background-color: #F0F0F0;
+    }
+    
+    #left {
+      left: 30%;
+      transform: scale(1) translateY(0%) translateX(-50%);
+      z-index: 10;
+      background-color: #6C86A5;
+    }
+    
+    #center {
+      left: 50%;
+      transform: scale(1.05) translateY(0%) translateX(-50%);
+      z-index: 15;
+    }
+    
+    #right {
+      left: 70%;
+      transform: scale(1) translateY(0%) translateX(-50%);
+      z-index: 10;
+      background-color: #6C86A5;
+    }
+    
+    #far-right {
+      left: 80%;
+      transform: scale(.9) translateY(0%) translateX(-50%);
+      z-index: 5;
+      background-color: #F0F0F0;
+    }
+  
+    .carousel-text {
+      font-size: small;
+    }
+    .btn {
+      width: 6rem;
+      height: 2rem;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+    }
+  }

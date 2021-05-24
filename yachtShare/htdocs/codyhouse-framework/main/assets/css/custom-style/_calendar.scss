@@ -1,0 +1,131 @@
+.calendar-container{
+    margin-top: 5%;
+    max-width: 100%;
+    min-width: 100%;
+    border: 1px solid #cece;
+    margin: 0px auto;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+.calendar-container button{
+  padding: 10px 25px;
+  outline: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  transition: all .3s ease-in;
+}
+
+.center{
+  text-align: center;
+}
+
+.month-header {
+  padding: 10px 10px;
+  width: 100%;
+  background: #F1E4EB;
+  text-align: center;
+}
+
+.month-header ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month-header ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month-header .prev-month {
+  float: left;
+}
+
+.month-header .next-month {
+  float: right; 
+}
+.prev-month,.next-month{
+  cursor: pointer; 
+  padding: 10px;
+}
+.calendar-month-title{
+  font-size: calc(1.3em*2);
+}
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  padding: 5px;
+  color: #666;
+  text-align: center;
+}
+
+.calendar-days {
+  height: 41vh;
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.calendar-days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #777;
+  padding: 5px;
+  height: 50px;
+  line-height: 90px;
+}
+
+.calendar-days > li:hover:not(.blank),.calendar-days > li.active {
+  padding: 5px;
+  background: #95A9C0;
+  color: white !important;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.calendar-container .calendar-step2,
+.calendar-container .calendar-step3,
+.calendar-container .calendar-footer{
+  min-height: 100vh;
+  padding: 10px 5px;
+}
+
+
+/** Time Styles **/
+.calendar-container .calendar-ampm label{
+  display: block;
+}
+
+.calendar-container .calendar-time-hours,.calendar-container .calendar-time-minutes{
+  display: inline-block;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .calendar-days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .calendar-days li {width: 12.5%;}
+  .calendar-days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .calendar-days li {width: 12.2%;}
+}
